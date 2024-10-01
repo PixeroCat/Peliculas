@@ -7,7 +7,8 @@ data class Pelicula(
     val titulo:String,
     val sinopsis:String,
     val duracion:String,
-    val genero:String
+    val genero:String,
+    val imagenUri: String?
 )
 
 class PeliculaViewModel : ViewModel() {

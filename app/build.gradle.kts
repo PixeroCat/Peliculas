@@ -51,6 +51,7 @@ android {
 
 dependencies {
 
+    implementation ("com.github.skydoves:landscapist-glide:1.4.3")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)

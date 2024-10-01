@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -30,6 +31,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
+import com.skydoves.landscapist.glide.GlideImage
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -90,6 +92,9 @@ fun Peliculas(navController: NavHostController, peliculaViewModel: PeliculaViewM
                         Text("Sinopsis: ${pelicula.sinopsis}")
                         Text("Duración: ${pelicula.duracion}")
                         Text("Genero: ${pelicula.genero}")
+                        pelicula.imagenUri?.let {
+                            GlideImage(imageModel = it, modifier = Modifier.size(150.dp))
+                        }
                     }
                 }                
             }
